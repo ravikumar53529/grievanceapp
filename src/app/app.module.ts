@@ -9,6 +9,13 @@ import { ProgressBarModule} from 'primeng/progressbar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgChartsModule } from 'ng2-charts';
+import { ToastModule } from 'primeng/toast';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +29,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ProgressBarModule,
     DropdownModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgChartsModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

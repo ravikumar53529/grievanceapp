@@ -158,4 +158,11 @@ export class AppComponent {
         city:new FormControl()
     })
  }
+
+ progressBarValue: number = 50; // Initial value
+
+ // Function to update the progress bar value dynamically
+ updateProgressBarValue(newValue: number) {
+   this.progressBarValue = newValue;
+ }
 }
