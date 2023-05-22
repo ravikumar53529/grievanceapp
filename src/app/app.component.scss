@@ -1,0 +1,19 @@
+
+.heading{
+    width: 100%;
+    
+    height: auto;
+}
+.ticket-data{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.ticket-time{
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+}
+.main-data{
+    padding: 10px
+}

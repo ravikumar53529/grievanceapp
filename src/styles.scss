@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "/node_modules/primeflex/primeflex.css";
+@import "primeicons/primeicons.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.barchart .p-chart-data canvas{
+    height: 300px;
+}
+.d-chart .doughnut-data canvas{
+    width: 320px;
+    height: 280px !important;
+}
+.p-progressbar {
+    position: relative;
+    overflow: hidden;
+    height: 9px;
+}
+.p-progressbar-determinate .p-progressbar-label{
+  font-size: 0px;
+}
