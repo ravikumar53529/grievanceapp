@@ -1,143 +1,157 @@
 <div class="grid shadow-2 mr-0">
   <div class="col-12">
     <div class="heading surface-300">
-       <div class="grid">
+      <div class="grid">
         <div class="col-3 mt-3">
-         <h3 class="text-center -translate-y-50 ">Current Tickets Status</h3>
+          <h3 class="text-center -translate-y-50 ">Current Tickets Status</h3>
         </div>
         <div class="col-6 mt-2">
           <div class="flex justify-content-between">
-              <h1 class="text-primary">609<sub class="text-sm">Open</sub></h1>  
-              <h1 class="text-red-500">571<sub class="text-sm">Overdue</sub></h1>  
-              <h1 class="text-500"> 5<sub class="text-sm">Unassigned</sub></h1>  
+            <h1 class="text-primary">609<sub class="text-sm">Open</sub></h1>
+            <h1 class="text-red-500">571<sub class="text-sm">Overdue</sub></h1>
+            <h1 class="text-500"> 5<sub class="text-sm">Unassigned</sub></h1>
           </div>
         </div>
         <div class="col-3 mt-3">
 
-           <div class="flex justify-content-around "> 
+          <div class="flex justify-content-around ">
             <div class="flex ">
               <h3 class="mr-2 ">Last 7 Days</h3>
-           
-       <form [formGroup]="form">
-             <p-dropdown formControlName="city" [options]="cities" optionLabel="name"></p-dropdown>
-        </form>
-           
-            <p class="pi pi-ellipsis-h"></p>
-           </div>
-        </div>
 
-       </div>
+              <form [formGroup]="form">
+                <p-dropdown formControlName="city" [options]="cities" optionLabel="name"></p-dropdown>
+              </form>
+
+              <p class="pi pi-ellipsis-h"></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="col-12">
+    <div class="col-12">
       <div class="p-2">
         <div class="card barchart">
           <p-chart class="p-chart-data" type="line" [data]="data" [options]="options"></p-chart>
+        </div>
       </div>
-      </div>
-  </div>
-  <div class="col-12">
-    <div class="grid p-2">
-      <div class="col-4 ">
-        <div class="shadow-2 p-4">
-          <div class="flex justify-content-between">
-          <div>
-            <h2 class="mb-2">1190</h2>
-            <h3>New Tickets(total)</h3>
+    </div>
+    <div class="col-12">
+      <div class="grid p-2">
+        <div class="col-4 ">
+          <div class="shadow-2 p-4">
+            <div class="flex justify-content-between">
+              <div>
+                <h2 class="mb-2">1190</h2>
+                <h3>New Tickets(total)</h3>
+              </div>
+              <div>
+                <span class="flex justify-content-end mb-2 text-green-500">
+                  <i class="pi pi-check-circle"></i>
+                </span>
+                <div>
+
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div >
-            <span class="flex justify-content-end mb-2 text-green-500">
-              <i class="pi pi-check-circle"></i>
-            </span>
-            <div>
-              
+        </div>
+        <div class="col-4 ">
+          <div class="shadow-2 p-4">
+            <div class="flex justify-content-between">
+              <div>
+                <h2 class="mb-2">1274</h2>
+                <h3>Closed Tickets(total)</h3>
+              </div>
+              <div>
+                <span class="flex justify-content-end mb-2 text-blue-500">
+                  <i class="pi pi-check-circle"></i>
+                </span>
+
+              </div>
             </div>
           </div>
         </div>
-        
+        <div class="col-4 ">
+          <div class="shadow-2 p-4">
+            <div class="flex justify-content-between">
+              <div>
+                <h2 class="mb-2">590</h2>
+                <h3>Backlog(average)</h3>
+              </div>
+              <div>
+                <span class="flex justify-content-end mb-2 text-blue-500">
+                  <i class="pi pi-check-circle"></i>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-4 ">
-       <div class="shadow-2 p-4">
-        <div class="flex justify-content-between">
-          <div>
-            <h2 class="mb-2">1274</h2>
-            <h3>Closed Tickets(total)</h3>
+
+
+    </div>
+
+  </div>
+</div>
+  
+  <div class="grid mt-1 m-0">
+    <div class="col-4 shadow-2 d-chart">
+      <h3 class="p-2">Traffic Analysis</h3>
+      <p-chart class="doughnut-data" type="doughnut" [data]="data1" [options]="options1"></p-chart>
+    </div>
+    <div class="col-4 shadow-2">
+      <h6 class="ticket-time">Average Tickets Reply Time</h6>
+      <div class="main-data">
+        <div class="t-data">
+          <div class="ticket-data">
+            <h4>first response Time</h4>
+            <h6>21:06</h6>
           </div>
-          <div >
-            <span class="flex justify-content-end mb-2 text-blue-500">
-              <i class="pi pi-check-circle"></i>
-            </span>
-            
-          </div>
+          <p-progressBar [value]="50"></p-progressBar>
         </div>
-       </div>
-       </div>
-       <div class="col-4 ">
-       <div class="shadow-2 p-4">
-        <div class="flex justify-content-between">
-          <div>
-            <h2 class="mb-2">590</h2>
-            <h3>Backlog(average)</h3>
+        <div class="t-data">
+          <div class="ticket-data">
+            <h4>first response Time</h4>
+            <h6>21:06</h6>
           </div>
-          <div >
-            <span class="flex justify-content-end mb-2 text-blue-500">
-              <i class="pi pi-check-circle"></i>
-            </span>
-          </div>
+          <p-progressBar [value]="50"></p-progressBar>
         </div>
-       </div>
-       </div>
+        <div class="t-data">
+          <div class="ticket-data">
+            <h4>first response Time</h4>
+            <h6>21:06</h6>
+          </div>
+          <p-progressBar [value]="50"></p-progressBar>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4 shadow-2">
+      <div class="t-data">
+        <div class="ratings">
+          <h6 class="ticket-time">Happyness Rating</h6>
+          <h5 class="rating"> 128 Ratings</h5>
+        </div>
+          <div class="ticket-data">
+           </div>
+          <p-progressBar [value]="50" class="progress-data"></p-progressBar>
+
+          <p-progressBar [value]="50" class="progress-dat"></p-progressBar>
+
+          <p-progressBar [value]="50" class="progress-dAt"></p-progressBar>
+
+        </div>
+        <div style="justify-content: center;">
+          <h5>Happy</h5>
+          <h5>Satisfied</h5>
+          <h5>Not satisfied</h5>
+        </div>
     </div>
     
-
   </div>
 
-</div>
-<div class="grid mt-1 m-0">
-  <div class="col-4 shadow-2 d-chart">
-    <h3 class="p-2">Traffic Analysis</h3>
-     <p-chart  class="doughnut-data" type="doughnut" [data]="data1" [options]="options1"></p-chart>
-  </div>
-  <div class="col-4 shadow-2">
-    <h6 class="ticket-time">Average Tickets Reply Time</h6>
-  <div class="main-data">
-    <div class="t-data">
-      <div class="ticket-data">
-        <h4>first response Time</h4>
-        <h6>21:06</h6>
-      </div>
-      <p-progressBar [value]="50"></p-progressBar>
-    </div>
-    <div class="t-data">
-      <div class="ticket-data">
-        <h4>first response Time</h4>
-        <h6>21:06</h6>
-      </div>
-      <p-progressBar [value]="50"></p-progressBar>
-    </div>
-    <div class="t-data">
-      <div class="ticket-data">
-        <h4>first response Time</h4>
-        <h6>21:06</h6>
-      </div>
-      <p-progressBar [value]="50"></p-progressBar>
-    </div>
-  </div>
-  </div>
-
-  <div class="col-4 shadow-2">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis aut natus reprehenderit quaerat a nam ab est, iusto sapiente soluta accusantium animi laudantium quae.</p>
-  </div>
-</div>
-
-
-
-
-
-
-
-<!-- 
 
 
 
@@ -154,74 +168,6 @@
 
 
 
-
-
-<div class="card flex justify-content-center">
-  <p-button label="Check" icon="pi pi-check"></p-button>
-</div>
-<div class="card">
-  <h5>Vertical and Grid</h5>
-  <div class="formgrid grid">
-      <div class="field col">
-          <label for="firstname2">Firstname</label>
-          <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-      </div>
-      <div class="field col">
-          <label for="lastname2">Lastname</label>
-          <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-      </div>
-  </div>
-</div>
-<i class="pi pi-check"></i>
-<i class="pi pi-times"></i>
-<span class="pi pi-search"></span>
-<span class="pi pi-user"></span>
-<div class="grid mt-3 p-5">
-  <div class="col bg-blue-100 text-md p-4  mr-2">
-    <div class="grid">
-      <div class="col bg-yellow-200 mr-3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit dignissimos in.
-      </div>
-      <div class="col  bg-red-200 h-2rem">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores corporis quae at excepturi nobis cum doloremque tempore repellat. Placeat fuga, alias quia incidunt, quidem laudantium nemo, eaque distinctio deleniti eveniet est ad ratione ullam?
-      </div>
-
-    </div>
-   
-  
-  </div>
-  <div class="col bg-red-100 text-md p-4">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ad.
-  </div>
-  
-
-</div>
-
-
-
-<div class="grid">
-  <div class="col-8">
-    <div class="grid">
-      <div class="col-6 bg-red-100">
-1
-      </div>
-      <div class="col-6 bg-blue-100">
-2
-      </div>
-      <div class="col-12 bg-yellow-300">
-3
-      </div>
-       
-    </div>
-
-  </div>
-  <div class="col-4 bg-red-600">
-4
-  </div>
-
-</div> -->
-
-hello
 
 
 
