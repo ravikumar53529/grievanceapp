@@ -2,10 +2,13 @@
 @import "/node_modules/primeflex/primeflex.css";
 @import "primeicons/primeicons.css";
 
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .barchart .p-chart-data canvas {
   height: 300px;
@@ -39,7 +42,6 @@
   transform: rotate(-90deg);
   width: 265px;
   margin: 0px;
-  /* margin: auto; */
   margin-top: 138px;
 }
 
@@ -87,25 +89,45 @@
 // tab responsive starts here
 
 @media only screen and (min-width: 767px) and (max-width: 1028px) {
-    .progressbar-content-wrapper{
-        padding-top: 25px;
-        position: absolute;
-        left: 16%;
-        bottom: 43%;
-    }
-    .t-data-wrapper-progress-bar{
-min-height: 350px;
-    }
-    .col-4 {
-        padding: 5px;
-        margin-bottom: 10px;
-      }
-      .col-8 {
-        padding: 0px;
-      }
-      .main-content-dashboard-wrapper {
-        padding: 5px 8px 5px 15px;
-      }
+  .progressbar-content-wrapper {
+    padding-top: 25px;
+    position: absolute;
+    left: 16%;
+    bottom: 43%;
+  }
+  .t-data-wrapper-progress-bar {
+    min-height: 350px;
+  }
+  .col-4 {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .col-8 {
+    padding: 0px;
+  }
+  .main-content-dashboard-wrapper {
+    padding: 5px 8px 5px 15px;
+  }
+
+  .live-traffic-block-first .apexcharts-canvas {
+    transform: translateY(33px);
+  }
+  .pi-check-circle {
+    position: relative;
+    left: -25px;
+  }
+  .ticket-section-wrapper .grid-wrapper-block-1 .p-4{
+padding: 15px 10px !important ;
+  }
+ .progressbar-content-wrapper .progress-dAt .p-progressbar {
+    position: absolute;
+    left: 20%;
+}
+.progressbar-content-wrapper  .progress-data .p-progressbar {
+    position: absolute;
+    left: -24%;
+    bottom: 2px;
+}
 }
 // tab responsive ends here
 
@@ -145,15 +167,14 @@ min-height: 350px;
   }
   .grid-wrapper-block-1 .p-2 {
     padding: 0px !important;
-    margin-top: 0px ;
+    margin-top: 0px;
   }
-  .live-traffic-block-end{
+  .live-traffic-block-end {
     margin-bottom: 0px !important;
-
   }
- 
-.progressbar-content-wrapper {
+
+  .progressbar-content-wrapper {
     padding-top: 26px !important;
-}
+  }
 }
 // mobile responsive ends here

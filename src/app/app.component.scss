@@ -36,7 +36,7 @@
 }
 .happy-satisfied-rating-block{
     display: flex;
-    gap: 12%;
+    gap: 7%;
     justify-content: center;
     position: absolute;
     bottom: 3px;
@@ -46,9 +46,10 @@
 }
 .Happyness-block-info{
     position: relative;
+    // margin-bottom: 12px;
 }
 .satisfied-content-section{
-    padding-left: 8px;
+    padding-left: 26px;
 }
 .heading{
    height: 75px; 
@@ -70,10 +71,15 @@
     }
 }
 .ratings {
-    gap: 12%;
+    gap: 11%;
+}
+.live-traffic-block-first{
+    align-items: center;
+    padding-top: 40px;
 }
 .happy-satisfied-rating-block {
-    gap: 2%;
+justify-content: center;
+gap: 11%;
     position: absolute;
     bottom: 10px;
     left: -20px;
@@ -135,9 +141,14 @@ h2{
 
 }
 .backlog-average-block-content{
-    min-height: 148px;
+    min-height: 132px;
     padding-left: 10px !important;
 }
+.ticket-time{
+    font-size: 26px !important;
+    padding: 5px 5px;
+}
+
 
 }
 // tab responsive ends here
@@ -206,6 +217,7 @@ margin-top: 0px !important;
 }
 .grid-wrapper-block-first{
     width: 100%;
+    margin-bottom: 10px;
 
 }
 .t-data-wrapper-progress-bar{
@@ -232,6 +244,9 @@ gap: 6px;
     gap: 10px;
 
 }
+.satisfied-content-section{
+    padding-left: 0px !important;
+}
 .live-traffic-block-first {
     padding-left: 0px !important;
     flex-direction: column;
@@ -244,6 +259,9 @@ gap: 6px;
 .ticket-time-live-title {
     padding-left: 6px;
 }
+.happy-satisfied-rating-block {
+    left: 65px;}
+
 
 }
 // mobile responsive ends here
