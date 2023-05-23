@@ -1,7 +1,7 @@
 
 .heading{
     width: 100%;
-    height: auto;
+    height: 75px;
 }
 .ticket-data{
     display: flex;
@@ -25,3 +25,225 @@
     height: 200px;
     background-color: red;
 }
+.ratings{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+.progressbar-content-wrapper{
+    padding-top: 17px;
+
+}
+.happy-satisfied-rating-block{
+    display: flex;
+    gap: 12%;
+    justify-content: center;
+    position: absolute;
+    bottom: 3px;
+    left: 51px;
+    right: 0px;
+
+}
+.Happyness-block-info{
+    position: relative;
+}
+.satisfied-content-section{
+    padding-left: 8px;
+}
+.heading{
+   height: 75px; 
+}
+.heading-info-heading-main{
+    align-items: center;
+}
+.live-traffic-block-first{
+    min-height: 183px; //as per the requirement 
+}
+// tab responsive starts here
+
+@media only screen and (min-width:767px) and (max-width:1028px){
+.grid-wrapper-threechat-wrapper{
+    flex-direction: column;
+    .grid-wrapper-block-1{
+        width: 100%;
+        margin-bottom: 21px;
+    }
+}
+.ratings {
+    gap: 12%;
+}
+.happy-satisfied-rating-block {
+    gap: 2%;
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    right: 0px;
+}
+.happy-satisfied-rating-block h5{
+    font-size: 20px;
+}
+.live-traffic-block-end-main{
+    flex-direction: column;
+    .grid-wrapper-block-1{
+        width: 100%;
+    }
+    .grid-wrapper-block-first {
+        margin-bottom: 20px;
+
+        width: 100%;
+
+    }
+}
+.col-12{
+    padding: 0px;
+}
+.live-traffic-block-end .col-12{
+    padding: 2px;
+}
+.heading {
+    height: 115px;
+    padding: 10px;
+
+}
+.ticket-section-wrapper{
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 26px;
+
+}
+h3{
+    font-size: 26px;
+
+}
+h6{
+
+    font-size: 26px;
+
+}
+h5{
+    font-size: 26px;
+
+}
+.heading-info-heading-main h1 sub{
+    font-size: 18px !important;
+
+}
+h2{
+    font-size: 28px;
+
+}
+.backlog-average-block-content{
+    min-height: 148px;
+    padding-left: 10px !important;
+}
+
+}
+// tab responsive ends here
+
+
+// mobile responsive starts here
+@media only screen and (max-width:767px){
+.heading-info-heading-main h3{
+    font-size: 20px;
+
+}
+.heading-info-heading-main h1{
+    font-size: 16px;
+
+}
+h1{
+    font-size: 16px;
+
+}
+h3{
+    font-size: 16px;
+
+}
+h6{
+
+    font-size: 16px;
+
+}
+h5{
+    font-size: 16px;
+
+}
+.heading-info-heading-main h1 sub{
+    font-size: 12px !important;
+
+}
+.heading-info-heading-main{
+flex-wrap: wrap;
+}
+.heading-info-heading-main-title{
+width: 100%;
+margin-top: 10px !important;
+}
+.heading-info-heading-main-content-section{
+    width: 60%;
+margin-top: 0px !important;
+
+}
+.heading-info-heading-main-dropdown{
+    width: 40%;
+margin-top: 0px !important;
+
+}
+.heading {
+    height: 95px;
+    padding: 12px;
+
+}
+
+.grid-wrapper{
+    flex-direction: column;
+    gap: 6px;
+}
+.grid-wrapper-block-1 {
+    width: 100%;
+}
+.grid-wrapper-block-first{
+    width: 100%;
+
+}
+.t-data-wrapper-progress-bar{
+    min-height: 238px;
+}
+.happy-satisfied-rating-block{
+    gap: 10%;
+}
+.live-traffic-block-first {
+    min-height: 157px;
+    padding-left: 10px !important;
+}
+.col-12{
+    padding: 0px;
+}
+.live-traffic-block-end .col-12{
+    padding: 2px;
+}
+.heading-info-heading-main-dropdown .flex{
+justify-content: space-around !important;
+gap: 6px;
+}
+.heading-info-heading-main-content-section .justify-content-between{
+    gap: 10px;
+
+}
+.live-traffic-block-first {
+    padding-left: 0px !important;
+    flex-direction: column;
+    align-items: center;
+}
+.ticket-time{
+    font-size: 16px;
+    padding: 10px 0px
+}
+.ticket-time-live-title {
+    padding-left: 6px;
+}
+
+}
+// mobile responsive ends here

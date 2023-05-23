@@ -2,90 +2,158 @@
 @import "/node_modules/primeflex/primeflex.css";
 @import "primeicons/primeicons.css";
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.barchart .p-chart-data canvas{
-    height: 300px;
+.barchart .p-chart-data canvas {
+  height: 300px;
 }
-.d-chart .doughnut-data canvas{
-    width: 320px;
-    height: 280px !important;
+.d-chart .doughnut-data canvas {
+  width: 320px;
+  height: 280px !important;
 }
 .p-progressbar {
-    position: relative;
-    overflow: hidden;
-    height: 9px;
+  position: relative;
+  overflow: hidden;
+  height: 9px;
 }
-.p-progressbar-determinate .p-progressbar-label{
+.p-progressbar-determinate .p-progressbar-label {
   font-size: 0px;
 }
 
-.barchart .p-element canvas{
-    height: 370px;
+.barchart .p-element canvas {
+  height: 370px;
 }
 .p-progressbar {
-    position: relative;
-    overflow: hidden;
-    height: 9px;
+  position: relative;
+  overflow: hidden;
+  height: 9px;
 }
-.p-progressbar-determinate .p-progressbar-label{
+.p-progressbar-determinate .p-progressbar-label {
   font-size: 0px;
 }
 
-.progress-data .p-progressbar{
-    
-
-    transform: rotate(-90deg);
-    width: 265px;
-    margin: 0px;
-    /* margin: auto; */
-    margin-top: 138px;
+.progress-data .p-progressbar {
+  transform: rotate(-90deg);
+  width: 265px;
+  margin: 0px;
+  /* margin: auto; */
+  margin-top: 138px;
 }
 
-.progress-data .p-progressbar{
-    margin-left: 02px;
+.progress-data .p-progressbar {
+  margin-left: 02px;
+
+  margin-top: 100px;
+}
+.progress-dat .p-progressbar {
+  transform: rotate(-90deg);
+  width: 265px;
+  margin: 0px;
+
+  margin-top: 138px;
+}
+.progress-dat .p-progressbar {
+  margin-left: 102px;
+
+  margin-top: -23px;
+}
+.progress-dAt .p-progressbar {
+  transform: rotate(-90deg);
+  width: 265px;
+  margin: 0px;
+  margin-top: 38px;
+}
+
+.progress-dAt .p-progressbar {
+  margin-left: 204px;
+  margin-top: -23px;
+}
+.progress-dAt .p-progressbar .p-progressbar-value {
+  background-color: red;
+}
+.progress-dat .p-progressbar .p-progressbar-value {
+  background-color: green;
+}
+.progress-dat .p-progressbar .p-progressbar-value {
+  background-color: orange;
+}
+.chart-wrapper-web-info canvas {
+  margin: 0 auto;
+}
+
+// tab responsive starts here
+
+@media only screen and (min-width: 767px) and (max-width: 1028px) {
+    .progressbar-content-wrapper{
+        padding-top: 25px;
+        position: absolute;
+        left: 16%;
+        bottom: 43%;
+    }
+    .t-data-wrapper-progress-bar{
+min-height: 350px;
+    }
+    .col-4 {
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      .col-8 {
+        padding: 0px;
+      }
+      .main-content-dashboard-wrapper {
+        padding: 5px 8px 5px 15px;
+      }
+}
+// tab responsive ends here
+
+// mobile responsive starts here
+@media only screen and (max-width: 767px) {
+  .heading .p-dropdown .p-dropdown-trigger {
+    width: 1.5rem !important;
+  }
+  .heading .p-dropdown .p-dropdown-label {
+    padding: 5px 5px !important;
+    font-size: 11px;
+  }
+  .heading .p-dropdown .pi {
+    font-size: 12px !important;
+  }
+  .progress-data .p-progressbar {
+    width: 182px !important;
+  }
+  .progress-dat .p-progressbar {
+    width: 182px !important;
+  }
+  .progress-dAt .p-progressbar {
+    width: 182px;
+  }
+  .progress-data .p-progressbar {
+    margin-top: 55px;
+  }
+  .col-4 {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .col-8 {
+    padding: 0px;
+  }
+  .main-content-dashboard-wrapper {
+    padding: 5px 8px 5px 15px;
+  }
+  .grid-wrapper-block-1 .p-2 {
+    padding: 0px !important;
+    margin-top: 0px ;
+  }
+  .live-traffic-block-end{
+    margin-bottom: 0px !important;
+
+  }
  
-    margin-top: 100px;
-
-    
+.progressbar-content-wrapper {
+    padding-top: 26px !important;
 }
-.progress-dat .p-progressbar{
-    
-
-    transform: rotate(-90deg);
-    width: 265px;
-    margin: 0px;
-    
-    margin-top: 138px;
 }
-.progress-dat .p-progressbar{
-    
-  
-    margin-left: 102px;
- 
-    margin-top: -23px;
-
-}
-.progress-dAt .p-progressbar{
-    transform: rotate(-90deg);
-    width: 265px;
-    margin: 0px;
-    margin-top: 38px;
-}
-
-.progress-dAt .p-progressbar{
-    margin-left: 204px;
-    margin-top: -23px;
-}
-.progress-dAt .p-progressbar .p-progressbar-value{
-    background-color: red;
-}
-.progress-dat .p-progressbar .p-progressbar-value{
-    background-color: green;
-}
-.progress-dat .p-progressbar .p-progressbar-value{
-    background-color: orange;
-}
+// mobile responsive ends here

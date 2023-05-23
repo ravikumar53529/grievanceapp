@@ -1,18 +1,18 @@
 <div class="grid shadow-2 mr-0">
   <div class="col-12">
     <div class="heading surface-300">
-       <div class="grid">
-        <div class="col-3 mt-3">
+       <div class="grid heading-info-heading-main">
+        <div class="col-3 heading-info-heading-main-title mt-3">
          <h3 class="text-center -translate-y-50 ">Current Tickets Status</h3>
         </div>
-        <div class="col-6 mt-2">
+        <div class="col-6 heading-info-heading-main-content-section mt-2">
           <div class="flex justify-content-between">
               <h1 class="text-primary">609<sub class="text-sm">Open</sub></h1>  
               <h1 class="text-red-500">571<sub class="text-sm">Overdue</sub></h1>  
               <h1 class="text-500"> 5<sub class="text-sm">Unassigned</sub></h1>  
           </div>
         </div>
-        <div class="col-3 mt-3">
+        <div class="col-3 heading-info-heading-main-dropdown mt-2">
 
            <div class="flex justify-content-around "> 
             
@@ -26,6 +26,9 @@
        </div>
     </div>
   </div>
+  <div class="main-content-dashboard-wrapper">
+
+ 
   <div class="col-12">
       <div class="p-2">
         <div class="card barchart">
@@ -34,8 +37,8 @@
       </div>
   </div>
   <div class="col-12">
-    <div class="grid p-2">
-      <div class="col-4 ">
+    <div class="grid grid-wrapper ticket-section-wrapper  p-2">
+      <div class="col-4 grid-wrapper-block-1 ">
         <div class="shadow-2 p-4">
           <div class="flex justify-content-between">
           <div>
@@ -54,7 +57,7 @@
         
         </div>
       </div>
-      <div class="col-4 ">
+      <div class="col-4 grid-wrapper-block-1 ">
        <div class="shadow-2 p-4">
         <div class="flex justify-content-between">
           <div>
@@ -70,8 +73,8 @@
         </div>
        </div>
        </div>
-       <div class="col-4 ">
-       <div class="shadow-2 p-4">
+       <div class="col-4 grid-wrapper-block-1 ">
+       <div class="shadow-2 backlog-average-block-content p-4">
         <div class="flex justify-content-between">
           <div>
             <h2 class="mb-2">{{backlogTickets}}</h2>
@@ -87,14 +90,14 @@
        </div>
     </div>
   </div>
-</div>
-</div>
-<div class="grid mt-1 m-0">
-  <div class="col-4 shadow-2 d-chart">
+
+
+<div class="grid grid-wrapper grid-wrapper-threechat-wrapper mt-1 m-0">
+  <div class="col-4 grid-wrapper-block-1 shadow-2 chart-wrapper-web-info d-chart">
     <h3 class="p-2">Traffic Analysis</h3>
      <p-chart  class="doughnut-data" type="doughnut" [data]="data1" [options]="options1"></p-chart>
   </div>
-  <div class="col-4 shadow-2">
+  <div class="col-4 grid-wrapper-block-1 shadow-2">
     <h3 class="p-2">Average Tickets Reply Time</h3>
   <div class="main-data">
     <div class="t-data">
@@ -120,28 +123,30 @@
     </div>
   </div>
   </div>
-  <div class="col-4 shadow-2">
-    <div class="t-data">
+  <div class="col-4 grid-wrapper-block-1 Happyness-block-info shadow-2">
+    <div class="t-data t-data-wrapper-progress-bar">
       <div class="ratings">
         <h3 class="p-2 mb-1">Happyness Rating</h3>
         <h5 class="rating"> 128 Ratings</h5>
       </div>
-        <p-progressBar [value]="50" class="progress-data"></p-progressBar>
+        <div class="progressbar-content-wrapper">
+          <p-progressBar [value]="50" class="progress-data"></p-progressBar>
 
         <p-progressBar [value]="50" class="progress-dat"></p-progressBar>
 
         <p-progressBar [value]="50" class="progress-dAt"></p-progressBar>
 
+        </div>
       </div>
-      <div style="justify-content: center;">
+      <div class="happy-satisfied-rating-block">
         <h5>Happy</h5>
-        <h5>Satisfied</h5>
+        <h5 class="satisfied-content-section">Satisfied</h5>
         <h5>Not satisfied</h5>
       </div>
   </div>
 </div>
-<div class="grid m-0">
-  <div class="col-8">
+<div class="grid grid-wrapper live-traffic-block-end-main m-0">
+  <div class="col-8 grid-wrapper-block-first">
     <div class="shadow-2 p-2">
       <div class="card barchart">
         <h6 class="ticket-time border-bottom-1">Incoming and Outgoing Bandwidth</h6>
@@ -149,14 +154,14 @@
     </div>
     </div>  
   </div>
-  <div class="col-4">
+  <div class="col-4 grid-wrapper-block-1 live-traffic-block-end">
     <div class="grid">
       <div class="col-12">
         <div class="shadow-2 p-2">
           <div>                            
-            <h6 class="ticket-time border-bottom-1">Live Traffic</h6>
+            <h6 class="ticket-time ticket-time-live-title border-bottom-1">Live Traffic</h6>
           </div>
-        <div class="flex justify-content-around p-1">
+        <div class="flex justify-content-around p-1 live-traffic-block-first">
          <div >
           <h6 class="ticket-time text-green-500">76%</h6>
           <h4>Incoming</h4>
@@ -171,7 +176,7 @@
         ></apx-chart>
          </div>
         </div>
-        <div class="flex justify-content-around m-0">
+        <div class="flex justify-content-around m-0 live-traffic-block-first">
           <div>
             <h6 class="ticket-time text-red-500">70%</h6>
             <h4>Outgoing</h4>
@@ -192,82 +197,6 @@
   </div>
 </div>
 
-
-
-
-
-<!-- 
-
-
-
-
-
-
-
-
-<div class="card flex justify-content-center">
-  <p-button label="Check" icon="pi pi-check"></p-button>
 </div>
-<div class="card">
-  <h5>Vertical and Grid</h5>
-  <div class="formgrid grid">
-      <div class="field col">
-          <label for="firstname2">Firstname</label>
-          <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-      </div>
-      <div class="field col">
-          <label for="lastname2">Lastname</label>
-          <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-      </div>
-  </div>
-</div>
-<i class="pi pi-check"></i>
-<i class="pi pi-times"></i>
-<span class="pi pi-search"></span>
-<span class="pi pi-user"></span>
-<div class="grid mt-3 p-5">
-  <div class="col bg-blue-100 text-md p-4  mr-2">
-    <div class="grid">
-      <div class="col bg-yellow-200 mr-3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis fugit dignissimos in.
-      </div>
-      <div class="col  bg-red-200 h-2rem">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolores corporis quae at excepturi nobis cum doloremque tempore repellat. Placeat fuga, alias quia incidunt, quidem laudantium nemo, eaque distinctio deleniti eveniet est ad ratione ullam?
-      </div>
-
-    </div>
-   
-  
-  </div>
-  <div class="col bg-red-100 text-md p-4">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, ad.
-  </div>
-  
-
-</div>
-
-
-
-<div class="grid">
-  <div class="col-8">
-    <div class="grid">
-      <div class="col-6 bg-red-100">
-1
-      </div>
-      <div class="col-6 bg-blue-100">
-2
-      </div>
-      <div class="col-12 bg-yellow-300">
-3
-      </div>
-       
-    </div>
-
-  </div>
-  <div class="col-4 bg-red-600">
-4
-  </div>
-
-</div> -->
 
 
