@@ -23,6 +23,18 @@
   font-size: 0px;
 }
 
+.barchart .p-element canvas{
+    height: 370px;
+}
+.p-progressbar {
+    position: relative;
+    overflow: hidden;
+    height: 9px;
+}
+.p-progressbar-determinate .p-progressbar-label{
+  font-size: 0px;
+}
+
 .progress-data .p-progressbar{
     
 
