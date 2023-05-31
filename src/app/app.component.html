@@ -18,7 +18,7 @@
             
            <div>
             <form [formGroup]="form">
-              <p-dropdown formControlName="city" [options]="dates" optionLabel="name"></p-dropdown>
+              <p-dropdown formControlName="city" (onChange)="mainGraphFilter()" [(ngModel)]="selectedDate" [options]="dates" optionLabel="name"></p-dropdown>
             </form>
            </div>
             <p class="pi pi-ellipsis-h"></p>

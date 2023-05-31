@@ -35,6 +35,7 @@ export class AppComponent {
   public options1: any;
   public chartOptions: any;
   public  dates: City[]=[]; 
+  public selectedDate:any;
   public selectedCity!: City;
   public form!:FormGroup
   public data2:any;
@@ -157,8 +158,7 @@ export class AppComponent {
   
  public onDropDown():void{
     this.dates = [
-        { name: 'Last 7 Days'},
-        { name: 'Last 1 Month'},
+        { name: 'Last 7 Months'},
         { name: 'Last 1 Year' },
     ];
  }
@@ -346,5 +346,77 @@ export class AppComponent {
           }, 50);
       }
     
+public mainGraphFilter():void{
+this.dates.filter((data:any)=>{
+   if(this.selectedDate.name===data.name){
+    const documentStyle = getComputedStyle(document.documentElement);
+    const textColor = documentStyle.getPropertyValue('--text-color');
+    const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
+    const surfaceBorder = documentStyle.getPropertyValue('--surface-border'); 
+    this.data = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [
+            {
+                type: 'line',
+                label: 'New Tickets',
+                borderColor: documentStyle.getPropertyValue('--green-500'),
+                borderWidth: 2,
+                fill: false,
+                tension: 0.4,
+                data: [56, 36, 60, 67, 24, 45, 34,56, 36, 60, 67, 24]
+            },
+            {
+                type: 'bar',
+                label: 'Closed Tickets',
+                backgroundColor: documentStyle.getPropertyValue('--blue-500'),
+                data: [50, 31, 56, 67, 24, 45, 34,50, 36, 54, 63, 20],
+                borderColor: 'white',
+                borderWidth: 2
+            },
+            {
+                type: 'bar',
+                label: 'Backlog Tickets',
+                backgroundColor: documentStyle.getPropertyValue('--orange-500'),
+                data: [43, 24, 50, 61, 20, 32, 31,53, 31, 52, 64, 18]
+            },
+            
+        ]
+    };
+    
+    this.options = {
+        maintainAspectRatio: false,
+        aspectRatio: 0.6,
+        plugins: {
+            legend: {
+                labels: {
+                    color: textColor
+                }
+            }
+        },
+        scales: {
+            x: {
+                ticks: {
+                    color: textColorSecondary
+                },
+                grid: {
+                    color: surfaceBorder
+                }
+            },
+            y: {
+                ticks: {
+                    color: textColorSecondary
+                },
+                grid: {
+                    color: surfaceBorder
+                }
+         },     
+        }
+    };
+   }else{
+    this.onGrievanceMainSec()  
+   }
+})
+
+}
 
 }
